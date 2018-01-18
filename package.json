@@ -1,0 +1,22 @@
+{
+  "name": "tremorylibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Johnstedt/TremoryLibrary.git"
+  },
+  "keywords": [
+    "tremory"
+  ],
+  "author": "John-John Markstedt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Johnstedt/TremoryLibrary/issues"
+  },
+  "homepage": "https://github.com/Johnstedt/TremoryLibrary#readme"
+}
