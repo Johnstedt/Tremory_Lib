@@ -2,6 +2,11 @@
 const config = 'TEST' 
 
 export function getServerURL() {
+
+    if(config == "LOCAL"){
+        return "http://localhost:82/TremoryBeta"
+    }
+
    return config=='TEST' ? 'https://www.tremory.com' : 'https://tremory.com'
 }
 
