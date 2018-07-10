@@ -18,7 +18,10 @@ import share from './reducers/shareReducer'
 
 import { isProduction } from './Config'
 
-export default createStore(
-    combineReducers({main, profile, image, key, album, current, notification, search, settings, edit, explore, share}), {},
-    isProduction() ? applyMiddleware( thunk, promise()) : applyMiddleware(createLogger(), thunk, promise())
+export const root = {main, profile, image, key, album, current, notification, search, settings, edit, explore, share}
+
+export const store = createStore(
+    combineReducers(root),   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    isProduction() ? applyMiddleware( thunk, promise()) : applyMiddleware(createLogger(), thunk, promise()),
+  
 );
