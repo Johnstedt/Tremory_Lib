@@ -11,14 +11,13 @@ import album from './reducers/albumReducer'
 import current from './reducers/currentReducer'
 import notification from './reducers/notificationReducer'
 import search from './reducers/searchReducer'
-import settings from './reducers/settingsReducer'
 import edit from './reducers/editReducer'
 import explore from './reducers/exploreReducer'
 import share from './reducers/shareReducer'
 
 import { isProduction } from './Config'
 
-export const root = {main, profile, image, key, album, current, notification, search, settings, edit, explore, share}
+export const root = {main, profile, image, key, album, current, notification, search, edit, explore, share}
 
 export const store = createStore(
     combineReducers(root),   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
