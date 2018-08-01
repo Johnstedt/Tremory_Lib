@@ -10,3 +10,15 @@ export function getCurrentFavorites(id){
        }) 
     }
 }
+
+export function addFavorite (item) {
+    return async (dispatch) => {
+        dispatch({type: "ADD_FAVORITE", payload: item,});
+    }
+}
+
+export function removeFavorite (item) {
+    return async (dispatch) => {
+        dispatch({type: "REMOVE_FAVORITE", payload: item,});
+    }
+}
