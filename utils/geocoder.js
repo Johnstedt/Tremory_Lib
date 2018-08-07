@@ -1,7 +1,7 @@
 //import Geocoder from 'react-native-geocoding'
 import Geocoder from './GeocoderTemp'
-import { addLocationToPoint } from '../../node_modules/tremorylibrary/lib/PointFetch'
-import continentDoesContain from '../tree/ContinentCountryMapping'
+import { addLocationToPoint } from '../lib/PointFetch'
+import continentDoesContain from './ContinentCountryMapping'
 
 export async function getLocation(lat, lng, point_id) {
     Geocoder.setApiKey('AIzaSyCArIlwT7KWfKsW5kV4TjHFx8NJ8pUTSak')
