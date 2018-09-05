@@ -35,12 +35,6 @@ const current = (
 				favorites: action.payload
 			}
 			break
-		case "SET_CURRENT_POINTS_BY_USER_FULFILLED":
-			state = {
-				...state,
-				points: action.payload
-			}
-			break
 		case "UPDATE_CURRENT_POINTS":
 			state = {
 				...state,
@@ -58,7 +52,7 @@ const current = (
 		case "REMOVE_FAVORITE":
 			state = {
 				...state,
-				favorites: state.favorites.filter((favorite) => favorite.point_id != action.payload.point_id)
+				favorites: state.favorites.filter((favorite) => favorite.id != action.payload.point_id)
 			}
 			break
 	}
