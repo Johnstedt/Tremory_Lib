@@ -58,7 +58,7 @@ const current = (
 		case "REMOVE_FAVORITE":
 			state = {
 				...state,
-				favorites: state.favorites.filter((favorite) => favorite.id != action.payload.point_id)
+				favorites: state.favorites.filter((favorite) => favorite.point_id != action.payload.point_id)
 			}
 			break
 	}
