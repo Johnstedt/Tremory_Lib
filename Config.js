@@ -1,6 +1,9 @@
 // 'TEST' or 'PRODUCTION'
 let config = 'TEST'
 
+//Default for web
+let platform = { credentials: 'include'}
+
 export function getServerURL() {
 
     if(config == "LOCAL"){
@@ -8,6 +11,22 @@ export function getServerURL() {
     }
 
    return config=='TEST' ? 'https://www.tremory.com' : 'https://tremory.com'
+}
+
+export function setHeader(platform) {
+
+	if(platform.OS === 'ios'){
+		platform = { credentials: 'include', headers: { "User-Agent": "ios" }}
+	}
+	else {
+		platform = { credentials: 'include', headers: { "User-Agent": "android" }}
+	}
+
+}
+
+export function getHeader() {
+
+	return platform
 }
 
 export function isProduction(){
